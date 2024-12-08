@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>You Found Me</title>
+<style>
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+input[type="text"] {
+  background-color: #222;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.close-button {
+  background-color: darkred;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>You found me</h1>
+  <input type="text" id="inputField" placeholder="number.">
+  <button ondragenter=""="checkInput()">check</button>
+  <button class="close-button" onclick="closeTab()">ssh exit</button>
+</div>
+
+<script>
+function checkInput() {
+  const inputValue = document.getElementById("inputField").value;
+  if (inputValue === "1926") {
+    window.location.href = "success.html";
+  } else {
+    document.getElementById("inputField").value = ""; // Сбрасываем поле
+    alert("no.");
+  }
+}
+
+function closeTab() {
+  window.close();
+}
+</script>
+
+</body>
+</body>
