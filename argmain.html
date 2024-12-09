@@ -37,6 +37,15 @@ close-button {
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
+} 
+  
+a.button {
+  display: inline-block;
+  background-color: #4CAF50; /* Зеленый цвет фона */
+  color: white;
+  padding: 14px 28px;
+  text-align: center;
+  text-decoration: none
 }
 </style>
 </head>
@@ -46,6 +55,7 @@ close-button {
   <input type="text" id="inputField" placeholder="number.">
   <button onclick="checkInput()">check</button>
   <button class="close-button" onclick="closeTab()">ssh exit</button>
+  <a href="secret.html" class="button">Перейти на другую страницу</a>
 </div>
 
 <script>
@@ -62,6 +72,7 @@ function checkInput() {
 function closeTab() {
   window.close();
 }
+
 </script>
 
 </body>
